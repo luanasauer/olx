@@ -46,7 +46,6 @@ export const PageArea = styled.div`
             span{
                 font-size: 14px;
             }
-
         }
 
         .categoryItem:hover,
@@ -54,12 +53,76 @@ export const PageArea = styled.div`
 
             background-color: #9BB83C;
             color: #FFF;
-
         }
-
     }
     .rightSide{
         flex: 1;
+        h2{
+            margin-top: 0;
+            font-size: 18px;
+        }
+        .listWarning{
+           padding: 30px;
+           text-align: center;
+        }
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+
+            .aditem{
+                width: 33%;
+            }
+        }
+        .pagination{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+
+            .pagItem{
+                width: 30px;
+                height: 30px;
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 14px;
+                margin-right: 5px;
+                cursor: pointer;
+                
+                &:hover{
+                    border: 1px solid #999;
+                }
+                &.active{
+                    background-color: #CCC;
+                }            
+            }
+        }
     }
 
+    @media(max-width:600px){
+        &{
+            flex-direction: column;
+        }
+        .leftSide{
+            width: auto;
+            margin-top: 10px;
+
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+
+                li{
+                    width: 50%;
+                }
+            }
+        }
+        .rightSide{
+            margin: 10px;
+            
+            .list .aditem{
+                width: 50%;
+            }
+        }   
+    }
 `;

@@ -5,7 +5,8 @@ const Footer = () => {
 
     return (
         <FooterArea>
-            ....
+            Todos os direitos reservados<br />
+            B7web
         </FooterArea>
     )
 }

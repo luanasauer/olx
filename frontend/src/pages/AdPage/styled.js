@@ -11,7 +11,6 @@ export const PageArea = styled.div`
     margin-top: 20px;
 
     .box{
-
         background-color: #FFF;
         border-radius: 5px;
         box-shadow: 0px 0px 4px #999;
@@ -27,7 +26,6 @@ export const PageArea = styled.div`
 
         .box{
             display: flex;
-
         }
 
         .adImage{
@@ -96,6 +94,39 @@ export const PageArea = styled.div`
         margin-top: 10px;
     }
 
+    @media(max-width:600px){
+        &{
+            flex-direction: column;
+        }
+        .leftSide{
+
+            margin: 0;
+            .box{
+                flex-direction: column;
+                width: 320px;
+                margin: auto;
+            }
+            .adInfo{
+                padding: 10px;
+            }
+        }
+        .rightSide{
+
+            width: auto;
+            margin-top: 20px;
+
+            .box{
+                width: 320px;
+                margin: auto;
+            }
+            .contactSellerLink{
+                width: 320px;
+                margin: 20px auto;
+            }
+
+        }
+    } 
+
 `;
 
 export const OthersArea = styled.div`
@@ -105,8 +136,18 @@ export const OthersArea = styled.div`
     }
     .list{
         display: flex;
+        flex-wrap: wrap;
         .aditem{
             width: 25%;
+        }
+    }
+    @media(max-width:600px){
+        &{
+            margin: 10px;
+        }
+
+        .list .aditem{
+            width: 50%;
         }
     }
 
@@ -124,5 +165,10 @@ export const BreadChumb = styled.div`
         color: #000;
     }
 
+    @media(max-width:600px){
+        &{
+            margin: 20px;
+        }
+    }
 
 `;
